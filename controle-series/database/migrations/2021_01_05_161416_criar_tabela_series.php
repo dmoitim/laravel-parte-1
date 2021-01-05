@@ -15,6 +15,8 @@ class CriarTabelaSeries extends Migration
     {
         Schema::create('series', function (Blueprint $table) {
             $table->string('nome');
+            // Para adicionar os campos "updated_at" e "created_at"
+            // $table->timestamps();
         });
     }
 
