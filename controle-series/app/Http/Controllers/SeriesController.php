@@ -31,12 +31,11 @@ class SeriesController extends Controller
             'Stranger Things'
         ];
 
-        $html = "<ul>";
-        foreach ($series as $serie) {
-            $html .= "<li>$serie</li>";
-        }
-        $html .= "</ul>";
+        return view('series.index', compact('series'));
+    }
 
-        return $html;
+    public function create()
+    {
+        return view('series.create');
     }
 }
