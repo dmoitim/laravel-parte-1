@@ -21,8 +21,10 @@ class SeriesController extends Controller
     public function store(Request $request)
     {
         $nome = $request->nome;
-        $serie = new Serie();
-        $serie->nome = $nome;
-        var_dump($serie->save());
+        $serie = Serie::create([
+            'nome' => $nome
+        ]);
+
+        echo "Série {$serie->nome} criada com ID {$serie->id}.";
     }
 }

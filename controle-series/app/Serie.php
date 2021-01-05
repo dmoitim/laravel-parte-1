@@ -10,4 +10,6 @@ class Serie extends Model
 
     // Para nao adicionar os campos "updated_at" e "created_at"
     public $timestamps = false;
+
+    protected $fillable = ['nome'];
 }
