@@ -32,7 +32,7 @@ class SeriesController extends Controller
             "Série {$serie->nome} criada com ID {$serie->id}."
         );
 
-        return redirect('/series');
+        return redirect()->route('listar_series');
     }
 
     public function destroy(Request $request)
@@ -46,6 +46,6 @@ class SeriesController extends Controller
             "Série ID {$id} excluída com sucesso."
         );
 
-        return redirect('/series');
+        return redirect()->route('listar_series');
     }
 }
